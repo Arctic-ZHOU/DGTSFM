@@ -11,7 +11,7 @@ def train_model(model, data, targets, num_epochs, learning_rate, weight_decay):
     for epoch in range(num_epochs):
         optimizer.zero_grad()
         output_tuple = model(data)
-        output = output_tuple[0]  # Assuming the first element is the output
+        output = output_tuple[0]
         loss = criterion(output, targets)
         loss.backward()
         optimizer.step()
